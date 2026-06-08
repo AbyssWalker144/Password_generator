@@ -9,10 +9,33 @@
 <body>
     <div class="container">
         <img src="img/padlock.jpg" alt="Password Generator" class="logo">
-        <h1>Password Generator</h1>
+        <h1>PASSWORD GENERATOR</h1>
+        <p class="description">Create strong and secure password to keep your account safe online.</p>
+
+        <div class="generator-section">
+
+            <div class="password-section">
+                <input type="number" id="password"  placeholder="Click 'Generate' to create a password" readonly>
+                <button class="generate">Generate</button>
+                <button class="copy-button">
+                    <img src="img/copy.png" alt="Copy Password" class="copy-icon">
+                </button>
+            </div>
+
+            <label for="length">Password Length:</label>
+            <input type="text" id="length" name="length" min="8" max="20" value="12">
+
+            <fieldset class="checkboxes">
+                <label><input type="checkbox" id="uppercase" checked> Include Uppercase Letters</label>
+                <label><input type="checkbox" id="lowercase" checked> Include Lowercase Letters</label>
+                <label><input type="checkbox" id="numbers" checked> Include Numbers</label>
+                <label><input type="checkbox" id="symbols"> Include Symbols</label>
+            </fieldset>
+
+        </div>
+
         <div class="password-box">
             <p id="password"></p>
         </div>
-        <button id="generate">Generate Password</button>
 </body>
 </html>

@@ -1,28 +1,123 @@
-body{
+@font-face {
+  font-family: 'Electrolize';
+  src: url('fonts/electrolize.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+    font-family: 'Electrolize', sans-serif;
     background-image: url("img/2151637775.jpg");
     background-size: cover;
     background-position: center;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
 }
 
-.container{
+.container > * {
+    /* border: 2px solid black; */
+}
+
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color:white;
-    padding: 20px 40px;
+    padding: 20px 80px;
     border-radius: 10px;
     box-shadow: 0 14px 18px rgba(0, 0, 0, 0.5);
-    width:fit-content
+    width: 400px;
 }
 
-.logo{
+.logo {
     width: 100px;
-    margin-bottom: 20px;
+    margin: 30px 0 20px 0;
 
+}
+
+.description {
+    font-size: 18px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    width: 350px;
+}
+
+input {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1.5px solid #000000;
+    border-radius: 14px;
+    margin-left: 10px;
+}
+
+.password-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    width: 400px;
+    position: relative;
+}
+
+#password {
+    margin: 0;
+    flex-grow: 1;
+}
+
+#length {
+    width: 40px;
+}
+
+.generate {
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #1f5fff;
+    color: white;
+    border: none;
+}
+
+.copy-button{
+    position: absolute;
+    background: none;
+    border: none;
+    left: 256px;
+}
+
+.copy-icon{
+    background: none;
+    width: 18px;
+    border: none;
+}
+
+.checkboxes {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border: none;
+    border-top: 1px solid #ccc;
+    padding: 20px 0 0;
+}
+.checkboxes label{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.checkboxes input {
+    width: 20px;
+    height: 20px;
+    border-radius: 14px;
 }
