@@ -3,8 +3,31 @@ let generateBtn = document.querySelector(".generate");
 let copyIconBtn = document.querySelector(".copy-icon");
 let copyMessage = document.querySelector(".copy-message");
 
+let numbers = "0123456789";
+let lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
+let uppercaseLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let symbols = "!@#$%^&*()";
+
 generateBtn.addEventListener("click", function () {
-    let chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let chars = "";
+
+    if (document.getElementById("numbers").checked) {
+        chars += numbers;
+    }
+    if (document.getElementById("lowercase").checked) {
+        chars += lowercaseLetters;
+    }
+    if (document.getElementById("uppercase").checked) {
+        chars += uppercaseLetters;
+    }
+    if (document.getElementById("symbols").checked) {
+        chars += symbols;
+    }
+    if (!chars) {
+        alert("Please select at least one character type.");
+        return;
+    }
+
     let passwordLength = document.getElementById("length").value;
     let password = "";
 
