@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Electrolize';
-  src: url('fonts/electrolize.ttf') format('truetype');
+  src: url('fonts/Electrolize-Regular.ttf');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -73,7 +73,9 @@ input {
 }
 
 #length {
-    width: 40px;
+    padding: 5px;
+    font-size: 16px;
+    border: 1.5px solid #000000;
 }
 
 .generate {
@@ -92,6 +94,23 @@ input {
     background: none;
     border: none;
     left: 256px;
+    cursor: pointer;
+}
+
+.copy-message {
+    content: "Copied";
+    font-size: 14px;
+    color: #1f5fff;
+    position: absolute;
+    font-weight: bold;
+    top: -10px;
+    left: -55px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.copy-message.show {
+    opacity: 1;
 }
 
 .copy-icon{

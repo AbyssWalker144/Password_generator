@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
+
 <body>
     <div class="container">
         <img src="img/padlock.jpg" alt="Password Generator" class="logo">
@@ -15,15 +18,24 @@
         <div class="generator-section">
 
             <div class="password-section">
-                <input type="number" id="password"  placeholder="Click 'Generate' to create a password" readonly>
+                <input type="text" id="password" placeholder="Click 'Generate' to create a password" readonly>
                 <button class="generate">Generate</button>
                 <button class="copy-button">
                     <img src="img/copy.png" alt="Copy Password" class="copy-icon">
+                    <p class="copy-message">Copied</p>
                 </button>
             </div>
 
             <label for="length">Password Length:</label>
-            <input type="text" id="length" name="length" min="8" max="20" value="12">
+            <select name="length" id="length">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
 
             <fieldset class="checkboxes">
                 <label><input type="checkbox" id="uppercase" checked> Include Uppercase Letters</label>
@@ -38,4 +50,7 @@
             <p id="password"></p>
         </div>
 </body>
+
+
+
 </html>
